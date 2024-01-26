@@ -1,0 +1,12 @@
+.primary-background{
+    background-color: #6c5ce7;
+    /* background-color: #25CCF7; */
+    /* background-color: #10ac84; */
+    /* background-color: #182C61; */
+  
+}
+
+.background-zigzag{
+    clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 100%, 81% 94%, 50% 100%, 20% 94%, 0 100%, 0 0, 37% 0);
+    /* clip-path: polygon(50% 0%, 74% 0, 100% 0, 100% 55%, 100% 100%, 49% 92%, 0 100%, 0 56%, 0 0, 23% 0); */
+}
