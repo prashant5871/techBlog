@@ -16,26 +16,25 @@ import com.tech.blog.helper.ConnectionProvider;
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		response.setContentType("text/html");
-		
+
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
-		
+
 		UserDao dao = new UserDao(ConnectionProvider.getConnection());
 		User u = dao.getUserByEmailAndPassword(email, password);
-		if(u == null)
-		{
+		if (u == null) {
 			System.out.println("u is null...");
 			response.sendRedirect("login.jsp");
-		}else {
-			
-			HttpSession session = request.getSession();	
+		} else {
+
+			HttpSession session = request.getSession();
 			session.setAttribute("CurrentUser", u);
 			response.sendRedirect("profile.jsp");
 		}
-		
-		
+
 	}
 
 }

@@ -6,9 +6,9 @@ public class User {
 	private String email;
 	private String password;
 	private String gender;
+	private String profile;
 	
 	public User(int id, String name, String email, String password, String gender) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.email = email;
@@ -17,11 +17,28 @@ public class User {
 	}
 
 	public User(String name, String email, String password, String gender) {
-		super();
+	
 		this.name = name;
 		this.email = email;
 		this.password = password;
 		this.gender = gender;
+	}
+
+	public User(int id,String name, String email, String password, String gender,String profile) {
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.password = password;
+		this.gender = gender;
+		this.profile = profile;
+	}
+
+	public String getProfile() {
+		return profile;
+	}
+
+	public void setProfile(String profile) {
+		this.profile = profile;
 	}
 
 	public User() {
